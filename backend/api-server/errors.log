@@ -1,0 +1,292 @@
+2021-10-20 09:05:58.142 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/site.py", line 202, in check_frp_status
+    connect_success = get_frp_status(site_id)
+  File "./app/api/api_v1/endpoints/utils/api_requests.py", line 18, in get_frp_status
+    raise ArtichokeException("Site id not found.")
+NameError: name 'ArtichokeException' is not defined
+2021-10-28 09:36:08.456 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+TypeError: 'NoneType' object is not iterable
+
+2021-10-28 09:40:56.342 app.crud.crud_sniffer ERROR Sniffer id fsafsfd not found.
+2021-10-28 09:47:56.541 app.crud.crud_sniffer ERROR Sniffer id: fsdfsad not found.
+2021-11-04 15:28:43.914 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) relation "rssi_monitor_site_sniffer" does not exist
+LINE 1: INSERT INTO rssi_monitor_site_sniffer VALUES ('test', 'xxxxx...
+                    ^
+ [SQL: "INSERT INTO rssi_monitor_site_sniffer VALUES ('test', 'xxxxxxxxxxxx', '-62,-64,-68')"]
+
+2021-11-08 14:22:02.741 fastapi ERROR Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2021-11-08 14:28:32.306 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/user.py", line 115, in create_upload_file
+    print(content)
+NameError: name 'content' is not defined
+2021-11-08 14:30:15.221 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/user.py", line 114, in create_upload_file
+    contents = await file.write()
+TypeError: write() missing 1 required positional argument: 'data'
+2021-11-08 14:30:32.149 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/user.py", line 114, in create_upload_file
+    contents = await file.write('fff.xlsx')
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/datastructures.py", line 443, in write
+    self.file.write(data)  # type: ignore
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/tempfile.py", line 768, in write
+    rv = file.write(s)
+TypeError: a bytes-like object is required, not 'str'
+2021-11-08 14:31:37.749 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/user.py", line 115, in create_upload_file
+    contents.write('fff.xlsx')
+AttributeError: 'bytes' object has no attribute 'write'
+2021-11-08 16:49:03.492 app.api.api_v1.endpoints.utils.token_verification ERROR User HI0008 token expired.
+2021-12-02 11:35:07.400 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'shutil' is not defined
+
+2021-12-02 11:35:23.542 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 77: invalid start byte
+
+2021-12-02 11:36:22.754 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+TypeError: 'encoding' is an invalid keyword argument for this function
+
+2021-12-02 11:36:47.797 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 77: invalid start byte
+
+2021-12-02 13:23:24.829 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+TypeError
+
+2021-12-02 13:37:53.560 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NotADirectoryError: [Errno 20] Not a directory: '門店營業時間.csv'
+
+2021-12-02 13:38:21.283 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+AttributeError: module 'shutil' has no attribute 'rm'
+
+2021-12-02 13:48:18.979 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'buffer' is not defined
+
+2021-12-02 13:48:28.132 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'csv' is not defined
+
+2021-12-02 13:48:55.674 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'buffer' is not defined
+
+2021-12-02 13:49:11.621 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'os' is not defined
+
+2021-12-02 14:06:50.973 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'shutil' is not defined
+
+2021-12-02 14:07:11.229 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'shutil' is not defined
+
+2021-12-02 14:07:30.277 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+AttributeError: 'str' object has no attribute 'read'
+
+2021-12-02 14:08:02.813 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 77-78: invalid continuation byte
+
+2021-12-02 14:08:28.022 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 77-78: invalid continuation byte
+
+2021-12-02 14:08:39.537 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 77: invalid start byte
+
+2021-12-02 14:09:18.345 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 77: invalid start byte
+
+2021-12-02 14:09:26.259 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 77-78: invalid continuation byte
+
+2022-02-09 09:44:41.996 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+AttributeError: 'DbRoutineInput' object has no attribute 'site_id'
+
+2022-02-09 09:45:11.102 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+redis.exceptions.ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+
+2022-02-09 09:45:32.071 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+redis.exceptions.ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+

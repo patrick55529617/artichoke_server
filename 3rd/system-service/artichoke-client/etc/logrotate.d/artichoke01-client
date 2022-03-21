@@ -1,0 +1,13 @@
+/var/lib/docker/containers/d64f61238c496f8d558d3b89eb9451cfcee36410dc6ab0633a067f78e8053811/d64f61238c496f8d558d3b89eb9451cfcee36410dc6ab0633a067f78e8053811-json.log {
+    daily
+    missingok
+    copytruncate
+    rotate 7
+    compress
+    notifempty
+    dateext
+    dateformat -pg-%Y%m%d
+    olddir /var/log/
+    postrotate
+    endscript
+}

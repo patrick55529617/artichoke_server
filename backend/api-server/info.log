@@ -1,0 +1,900 @@
+2021-10-19 17:50:28.017 uvicorn.error INFO Started server process [54868]
+2021-10-19 17:50:28.018 uvicorn.error INFO Waiting for application startup.
+2021-10-19 17:50:28.019 uvicorn.error INFO Application startup complete.
+2021-10-20 09:03:57.770 uvicorn.error INFO Shutting down
+2021-10-20 09:03:57.892 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:03:57.899 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:03:57.901 uvicorn.error INFO Finished server process [54868]
+2021-10-20 09:03:59.229 uvicorn.error INFO Started server process [55696]
+2021-10-20 09:03:59.230 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:03:59.231 uvicorn.error INFO Application startup complete.
+2021-10-20 09:03:59.948 uvicorn.error INFO Shutting down
+2021-10-20 09:04:00.053 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:04:00.054 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:04:00.054 uvicorn.error INFO Finished server process [55696]
+2021-10-20 09:04:00.758 uvicorn.error INFO Started server process [55697]
+2021-10-20 09:04:00.759 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:04:00.759 uvicorn.error INFO Application startup complete.
+2021-10-20 09:05:33.831 uvicorn.error INFO Shutting down
+2021-10-20 09:05:33.933 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:05:33.933 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:05:33.934 uvicorn.error INFO Finished server process [55697]
+2021-10-20 09:05:34.720 uvicorn.error INFO Started server process [55734]
+2021-10-20 09:05:34.721 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:05:34.722 uvicorn.error INFO Application startup complete.
+2021-10-20 09:05:37.598 uvicorn.error INFO Shutting down
+2021-10-20 09:05:37.700 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:05:37.701 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:05:37.701 uvicorn.error INFO Finished server process [55734]
+2021-10-20 09:05:38.373 uvicorn.error INFO Started server process [55735]
+2021-10-20 09:05:38.374 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:05:38.374 uvicorn.error INFO Application startup complete.
+2021-10-20 09:05:58.142 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/site.py", line 202, in check_frp_status
+    connect_success = get_frp_status(site_id)
+  File "./app/api/api_v1/endpoints/utils/api_requests.py", line 18, in get_frp_status
+    raise ArtichokeException("Site id not found.")
+NameError: name 'ArtichokeException' is not defined
+2021-10-20 09:06:13.486 uvicorn.error INFO Shutting down
+2021-10-20 09:06:13.590 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:06:13.591 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:06:13.592 uvicorn.error INFO Finished server process [55735]
+2021-10-20 09:06:14.367 uvicorn.error INFO Started server process [55743]
+2021-10-20 09:06:14.368 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:06:14.368 uvicorn.error INFO Application startup complete.
+2021-10-20 09:08:01.182 uvicorn.error INFO Shutting down
+2021-10-20 09:08:01.290 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:08:01.291 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:08:01.291 uvicorn.error INFO Finished server process [55743]
+2021-10-20 09:08:02.138 uvicorn.error INFO Started server process [55772]
+2021-10-20 09:08:02.139 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:08:02.140 uvicorn.error INFO Application startup complete.
+2021-10-20 09:18:13.611 uvicorn.error INFO Shutting down
+2021-10-20 09:18:13.721 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:18:13.724 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:18:13.724 uvicorn.error INFO Finished server process [55772]
+2021-10-20 09:18:14.976 uvicorn.error INFO Started server process [56290]
+2021-10-20 09:18:14.977 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:18:14.977 uvicorn.error INFO Application startup complete.
+2021-10-20 09:27:12.752 uvicorn.error INFO Shutting down
+2021-10-20 09:27:12.859 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:27:12.862 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:27:12.862 uvicorn.error INFO Finished server process [56290]
+2021-10-20 09:27:14.106 uvicorn.error INFO Started server process [56763]
+2021-10-20 09:27:14.107 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:27:14.108 uvicorn.error INFO Application startup complete.
+2021-10-20 09:31:00.225 uvicorn.error INFO Shutting down
+2021-10-20 09:31:00.334 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:31:00.335 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:31:00.336 uvicorn.error INFO Finished server process [56763]
+2021-10-20 09:34:28.950 uvicorn.error INFO Started server process [57617]
+2021-10-20 09:34:28.952 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:34:28.953 uvicorn.error INFO Application startup complete.
+2021-10-20 09:34:29.892 uvicorn.error INFO Shutting down
+2021-10-20 09:34:29.998 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:34:29.998 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:34:29.998 uvicorn.error INFO Finished server process [57617]
+2021-10-20 09:34:30.934 uvicorn.error INFO Started server process [57661]
+2021-10-20 09:34:30.935 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:34:30.936 uvicorn.error INFO Application startup complete.
+2021-10-20 09:34:44.973 uvicorn.error INFO Shutting down
+2021-10-20 09:34:45.077 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:34:45.079 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:34:45.079 uvicorn.error INFO Finished server process [57661]
+2021-10-20 09:34:51.217 uvicorn.error INFO Started server process [57865]
+2021-10-20 09:34:51.218 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:34:51.219 uvicorn.error INFO Application startup complete.
+2021-10-20 09:42:20.735 uvicorn.error INFO Shutting down
+2021-10-20 09:42:20.843 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:42:20.844 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:42:20.845 uvicorn.error INFO Finished server process [57865]
+2021-10-20 09:42:22.046 uvicorn.error INFO Started server process [58341]
+2021-10-20 09:42:22.047 uvicorn.error INFO Waiting for application startup.
+2021-10-20 09:42:22.048 uvicorn.error INFO Application startup complete.
+2021-10-20 09:45:35.211 uvicorn.error INFO Shutting down
+2021-10-20 09:45:35.319 uvicorn.error INFO Waiting for application shutdown.
+2021-10-20 09:45:35.321 uvicorn.error INFO Application shutdown complete.
+2021-10-20 09:45:35.321 uvicorn.error INFO Finished server process [58341]
+2021-10-28 09:35:50.095 uvicorn.error INFO Started server process [88636]
+2021-10-28 09:35:50.096 uvicorn.error INFO Waiting for application startup.
+2021-10-28 09:35:50.097 uvicorn.error INFO Application startup complete.
+2021-10-28 09:36:08.456 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+TypeError: 'NoneType' object is not iterable
+
+2021-10-28 09:40:51.517 uvicorn.error INFO Shutting down
+2021-10-28 09:40:51.624 uvicorn.error INFO Waiting for application shutdown.
+2021-10-28 09:40:51.625 uvicorn.error INFO Application shutdown complete.
+2021-10-28 09:40:51.626 uvicorn.error INFO Finished server process [88636]
+2021-10-28 09:40:52.856 uvicorn.error INFO Started server process [88734]
+2021-10-28 09:40:52.856 uvicorn.error INFO Waiting for application startup.
+2021-10-28 09:40:52.857 uvicorn.error INFO Application startup complete.
+2021-10-28 09:40:56.342 app.crud.crud_sniffer ERROR Sniffer id fsafsfd not found.
+2021-10-28 09:47:37.115 uvicorn.error INFO Shutting down
+2021-10-28 09:47:37.222 uvicorn.error INFO Waiting for application shutdown.
+2021-10-28 09:47:37.225 uvicorn.error INFO Application shutdown complete.
+2021-10-28 09:47:37.225 uvicorn.error INFO Finished server process [88734]
+2021-10-28 09:47:38.517 uvicorn.error INFO Started server process [88796]
+2021-10-28 09:47:38.518 uvicorn.error INFO Waiting for application startup.
+2021-10-28 09:47:38.519 uvicorn.error INFO Application startup complete.
+2021-10-28 09:47:56.541 app.crud.crud_sniffer ERROR Sniffer id: fsdfsad not found.
+2021-10-28 09:48:20.644 uvicorn.error INFO Shutting down
+2021-10-28 09:48:20.751 uvicorn.error INFO Waiting for application shutdown.
+2021-10-28 09:48:20.752 uvicorn.error INFO Application shutdown complete.
+2021-10-28 09:48:20.752 uvicorn.error INFO Finished server process [88796]
+2021-10-28 09:48:21.517 uvicorn.error INFO Started server process [88902]
+2021-10-28 09:48:21.518 uvicorn.error INFO Waiting for application startup.
+2021-10-28 09:48:21.518 uvicorn.error INFO Application startup complete.
+2021-10-28 09:58:42.479 uvicorn.error INFO Shutting down
+2021-10-28 09:58:42.588 uvicorn.error INFO Waiting for application shutdown.
+2021-10-28 09:58:42.590 uvicorn.error INFO Application shutdown complete.
+2021-10-28 09:58:42.591 uvicorn.error INFO Finished server process [88902]
+2021-11-04 13:44:48.792 uvicorn.error INFO Started server process [12172]
+2021-11-04 13:44:48.794 uvicorn.error INFO Waiting for application startup.
+2021-11-04 13:44:48.794 uvicorn.error INFO Application startup complete.
+2021-11-04 13:53:36.432 uvicorn.error INFO Shutting down
+2021-11-04 13:53:36.540 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 13:53:36.541 uvicorn.error INFO Application shutdown complete.
+2021-11-04 13:53:36.541 uvicorn.error INFO Finished server process [12172]
+2021-11-04 13:53:37.614 uvicorn.error INFO Started server process [12513]
+2021-11-04 13:53:37.616 uvicorn.error INFO Waiting for application startup.
+2021-11-04 13:53:37.616 uvicorn.error INFO Application startup complete.
+2021-11-04 13:55:39.903 uvicorn.error INFO Shutting down
+2021-11-04 13:55:40.009 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 13:55:40.010 uvicorn.error INFO Application shutdown complete.
+2021-11-04 13:55:40.011 uvicorn.error INFO Finished server process [12513]
+2021-11-04 13:55:41.009 uvicorn.error INFO Started server process [12530]
+2021-11-04 13:55:41.010 uvicorn.error INFO Waiting for application startup.
+2021-11-04 13:55:41.011 uvicorn.error INFO Application startup complete.
+2021-11-04 15:14:44.583 uvicorn.error INFO Shutting down
+2021-11-04 15:14:44.693 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 15:14:44.694 uvicorn.error INFO Application shutdown complete.
+2021-11-04 15:14:44.695 uvicorn.error INFO Finished server process [12530]
+2021-11-04 15:14:45.981 uvicorn.error INFO Started server process [13202]
+2021-11-04 15:14:45.982 uvicorn.error INFO Waiting for application startup.
+2021-11-04 15:14:45.983 uvicorn.error INFO Application startup complete.
+2021-11-04 15:15:03.522 uvicorn.error INFO Shutting down
+2021-11-04 15:15:03.635 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 15:15:03.635 uvicorn.error INFO Application shutdown complete.
+2021-11-04 15:15:03.636 uvicorn.error INFO Finished server process [13202]
+2021-11-04 15:15:25.137 uvicorn.error INFO Started server process [13209]
+2021-11-04 15:15:25.143 uvicorn.error INFO Waiting for application startup.
+2021-11-04 15:15:25.145 uvicorn.error INFO Application startup complete.
+2021-11-04 15:15:57.655 app.crud.crud_site INFO Start insert new rssi site info
+2021-11-04 15:15:57.978 app.crud.crud_site INFO Insert new rssi site info success.
+2021-11-04 15:22:21.933 uvicorn.error INFO Shutting down
+2021-11-04 15:22:22.039 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 15:22:22.040 uvicorn.error INFO Application shutdown complete.
+2021-11-04 15:22:22.040 uvicorn.error INFO Finished server process [13209]
+2021-11-04 15:22:23.079 uvicorn.error INFO Started server process [14137]
+2021-11-04 15:22:23.080 uvicorn.error INFO Waiting for application startup.
+2021-11-04 15:22:23.081 uvicorn.error INFO Application startup complete.
+2021-11-04 15:25:08.982 uvicorn.error INFO Shutting down
+2021-11-04 15:25:09.087 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 15:25:09.088 uvicorn.error INFO Application shutdown complete.
+2021-11-04 15:25:09.089 uvicorn.error INFO Finished server process [14137]
+2021-11-04 15:25:10.077 uvicorn.error INFO Started server process [14160]
+2021-11-04 15:25:10.077 uvicorn.error INFO Waiting for application startup.
+2021-11-04 15:25:10.078 uvicorn.error INFO Application startup complete.
+2021-11-04 15:25:59.838 uvicorn.error INFO Shutting down
+2021-11-04 15:25:59.940 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 15:25:59.941 uvicorn.error INFO Application shutdown complete.
+2021-11-04 15:25:59.942 uvicorn.error INFO Finished server process [14160]
+2021-11-04 15:26:00.742 uvicorn.error INFO Started server process [14166]
+2021-11-04 15:26:00.743 uvicorn.error INFO Waiting for application startup.
+2021-11-04 15:26:00.743 uvicorn.error INFO Application startup complete.
+2021-11-04 15:26:55.212 uvicorn.error INFO Shutting down
+2021-11-04 15:26:55.316 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 15:26:55.317 uvicorn.error INFO Application shutdown complete.
+2021-11-04 15:26:55.317 uvicorn.error INFO Finished server process [14166]
+2021-11-04 15:28:14.084 uvicorn.error INFO Started server process [14183]
+2021-11-04 15:28:14.086 uvicorn.error INFO Waiting for application startup.
+2021-11-04 15:28:14.087 uvicorn.error INFO Application startup complete.
+2021-11-04 15:28:43.697 app.crud.crud_sniffer INFO Start insert new rssi sniffer info
+2021-11-04 15:28:43.914 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) relation "rssi_monitor_site_sniffer" does not exist
+LINE 1: INSERT INTO rssi_monitor_site_sniffer VALUES ('test', 'xxxxx...
+                    ^
+ [SQL: "INSERT INTO rssi_monitor_site_sniffer VALUES ('test', 'xxxxxxxxxxxx', '-62,-64,-68')"]
+
+2021-11-04 15:31:12.891 uvicorn.error INFO Shutting down
+2021-11-04 15:31:12.995 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 15:31:12.996 uvicorn.error INFO Application shutdown complete.
+2021-11-04 15:31:12.996 uvicorn.error INFO Finished server process [14183]
+2021-11-04 15:31:14.225 uvicorn.error INFO Started server process [14212]
+2021-11-04 15:31:14.226 uvicorn.error INFO Waiting for application startup.
+2021-11-04 15:31:14.226 uvicorn.error INFO Application startup complete.
+2021-11-04 15:31:15.925 app.crud.crud_sniffer INFO Start insert new rssi sniffer info
+2021-11-04 15:31:16.345 app.crud.crud_sniffer INFO Insert new rssi sniffer info success.
+2021-11-04 17:40:27.321 uvicorn.error INFO Shutting down
+2021-11-04 17:40:27.437 uvicorn.error INFO Waiting for application shutdown.
+2021-11-04 17:40:27.444 uvicorn.error INFO Application shutdown complete.
+2021-11-04 17:40:27.445 uvicorn.error INFO Finished server process [14212]
+2021-11-08 14:22:02.741 fastapi ERROR Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2021-11-08 14:22:18.780 uvicorn.error INFO Started server process [7989]
+2021-11-08 14:22:18.781 uvicorn.error INFO Waiting for application startup.
+2021-11-08 14:22:18.781 uvicorn.error INFO Application startup complete.
+2021-11-08 14:28:29.381 uvicorn.error INFO Shutting down
+2021-11-08 14:28:29.489 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 14:28:29.491 uvicorn.error INFO Application shutdown complete.
+2021-11-08 14:28:29.492 uvicorn.error INFO Finished server process [7989]
+2021-11-08 14:28:30.765 uvicorn.error INFO Started server process [9210]
+2021-11-08 14:28:30.769 uvicorn.error INFO Waiting for application startup.
+2021-11-08 14:28:30.770 uvicorn.error INFO Application startup complete.
+2021-11-08 14:28:32.306 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/user.py", line 115, in create_upload_file
+    print(content)
+NameError: name 'content' is not defined
+2021-11-08 14:28:40.692 uvicorn.error INFO Shutting down
+2021-11-08 14:28:40.797 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 14:28:40.798 uvicorn.error INFO Application shutdown complete.
+2021-11-08 14:28:40.799 uvicorn.error INFO Finished server process [9210]
+2021-11-08 14:28:41.539 uvicorn.error INFO Started server process [9223]
+2021-11-08 14:28:41.540 uvicorn.error INFO Waiting for application startup.
+2021-11-08 14:28:41.540 uvicorn.error INFO Application startup complete.
+2021-11-08 14:30:09.525 uvicorn.error INFO Shutting down
+2021-11-08 14:30:09.629 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 14:30:09.631 uvicorn.error INFO Application shutdown complete.
+2021-11-08 14:30:09.631 uvicorn.error INFO Finished server process [9223]
+2021-11-08 14:30:10.847 uvicorn.error INFO Started server process [9325]
+2021-11-08 14:30:10.848 uvicorn.error INFO Waiting for application startup.
+2021-11-08 14:30:10.849 uvicorn.error INFO Application startup complete.
+2021-11-08 14:30:15.221 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/user.py", line 114, in create_upload_file
+    contents = await file.write()
+TypeError: write() missing 1 required positional argument: 'data'
+2021-11-08 14:30:29.700 uvicorn.error INFO Shutting down
+2021-11-08 14:30:29.804 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 14:30:29.804 uvicorn.error INFO Application shutdown complete.
+2021-11-08 14:30:29.805 uvicorn.error INFO Finished server process [9325]
+2021-11-08 14:30:30.531 uvicorn.error INFO Started server process [9346]
+2021-11-08 14:30:30.532 uvicorn.error INFO Waiting for application startup.
+2021-11-08 14:30:30.533 uvicorn.error INFO Application startup complete.
+2021-11-08 14:30:32.149 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/user.py", line 114, in create_upload_file
+    contents = await file.write('fff.xlsx')
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/datastructures.py", line 443, in write
+    self.file.write(data)  # type: ignore
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/tempfile.py", line 768, in write
+    rv = file.write(s)
+TypeError: a bytes-like object is required, not 'str'
+2021-11-08 14:31:34.734 uvicorn.error INFO Shutting down
+2021-11-08 14:31:34.838 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 14:31:34.839 uvicorn.error INFO Application shutdown complete.
+2021-11-08 14:31:34.840 uvicorn.error INFO Finished server process [9346]
+2021-11-08 14:31:36.042 uvicorn.error INFO Started server process [9419]
+2021-11-08 14:31:36.043 uvicorn.error INFO Waiting for application startup.
+2021-11-08 14:31:36.043 uvicorn.error INFO Application startup complete.
+2021-11-08 14:31:37.749 uvicorn.error ERROR Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 220, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/Users/mac/.pyenv/versions/3.6.12/Python.framework/Versions/3.6/lib/python3.6/site-packages/fastapi/routing.py", line 152, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./app/api/api_v1/endpoints/user.py", line 115, in create_upload_file
+    contents.write('fff.xlsx')
+AttributeError: 'bytes' object has no attribute 'write'
+2021-11-08 14:31:54.876 uvicorn.error INFO Shutting down
+2021-11-08 14:31:54.982 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 14:31:54.983 uvicorn.error INFO Application shutdown complete.
+2021-11-08 14:31:54.983 uvicorn.error INFO Finished server process [9419]
+2021-11-08 14:31:55.770 uvicorn.error INFO Started server process [9440]
+2021-11-08 14:31:55.775 uvicorn.error INFO Waiting for application startup.
+2021-11-08 14:31:55.776 uvicorn.error INFO Application startup complete.
+2021-11-08 14:32:44.953 uvicorn.error INFO Shutting down
+2021-11-08 14:32:45.060 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 14:32:45.061 uvicorn.error INFO Application shutdown complete.
+2021-11-08 14:32:45.063 uvicorn.error INFO Finished server process [9440]
+2021-11-08 14:32:45.832 uvicorn.error INFO Started server process [9775]
+2021-11-08 14:32:45.834 uvicorn.error INFO Waiting for application startup.
+2021-11-08 14:32:45.834 uvicorn.error INFO Application startup complete.
+2021-11-08 14:37:28.089 uvicorn.error INFO Shutting down
+2021-11-08 14:37:28.196 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 14:37:28.197 uvicorn.error INFO Application shutdown complete.
+2021-11-08 14:37:28.197 uvicorn.error INFO Finished server process [9775]
+2021-11-08 14:37:46.867 uvicorn.error INFO Started server process [10134]
+2021-11-08 14:37:46.868 uvicorn.error INFO Waiting for application startup.
+2021-11-08 14:37:46.868 uvicorn.error INFO Application startup complete.
+2021-11-08 16:49:03.492 app.api.api_v1.endpoints.utils.token_verification ERROR User HI0008 token expired.
+2021-11-08 16:49:08.257 uvicorn.error INFO Shutting down
+2021-11-08 16:49:08.358 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 16:49:08.359 uvicorn.error INFO Application shutdown complete.
+2021-11-08 16:49:08.360 uvicorn.error INFO Finished server process [10134]
+2021-11-08 16:49:09.665 uvicorn.error INFO Started server process [12325]
+2021-11-08 16:49:09.666 uvicorn.error INFO Waiting for application startup.
+2021-11-08 16:49:09.666 uvicorn.error INFO Application startup complete.
+2021-11-08 16:50:53.318 uvicorn.error INFO Shutting down
+2021-11-08 16:50:53.422 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 16:50:53.423 uvicorn.error INFO Application shutdown complete.
+2021-11-08 16:50:53.423 uvicorn.error INFO Finished server process [12325]
+2021-11-08 16:50:54.672 uvicorn.error INFO Started server process [12531]
+2021-11-08 16:50:54.673 uvicorn.error INFO Waiting for application startup.
+2021-11-08 16:50:54.673 uvicorn.error INFO Application startup complete.
+2021-11-08 16:51:03.760 uvicorn.error INFO Shutting down
+2021-11-08 16:51:03.861 uvicorn.error INFO Waiting for application shutdown.
+2021-11-08 16:51:03.862 uvicorn.error INFO Application shutdown complete.
+2021-11-08 16:51:03.862 uvicorn.error INFO Finished server process [12531]
+2021-11-08 16:51:04.584 uvicorn.error INFO Started server process [12636]
+2021-11-08 16:51:04.585 uvicorn.error INFO Waiting for application startup.
+2021-11-08 16:51:04.585 uvicorn.error INFO Application startup complete.
+2021-11-23 13:40:25.122 uvicorn.error INFO Started server process [14560]
+2021-11-23 13:40:25.123 uvicorn.error INFO Waiting for application startup.
+2021-11-23 13:40:25.124 uvicorn.error INFO Application startup complete.
+2021-11-23 13:50:16.430 uvicorn.error INFO Shutting down
+2021-11-23 13:50:16.535 uvicorn.error INFO Waiting for application shutdown.
+2021-11-23 13:50:16.536 uvicorn.error INFO Application shutdown complete.
+2021-11-23 13:50:16.536 uvicorn.error INFO Finished server process [14560]
+2021-12-02 09:57:06.744 uvicorn.error INFO Started server process [86815]
+2021-12-02 09:57:06.746 uvicorn.error INFO Waiting for application startup.
+2021-12-02 09:57:06.746 uvicorn.error INFO Application startup complete.
+2021-12-02 10:04:01.042 uvicorn.error INFO Shutting down
+2021-12-02 10:04:01.148 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 10:04:01.149 uvicorn.error INFO Application shutdown complete.
+2021-12-02 10:04:01.151 uvicorn.error INFO Finished server process [86815]
+2021-12-02 10:10:37.352 uvicorn.error INFO Started server process [87050]
+2021-12-02 10:10:37.355 uvicorn.error INFO Waiting for application startup.
+2021-12-02 10:10:37.356 uvicorn.error INFO Application startup complete.
+2021-12-02 10:11:08.817 uvicorn.error INFO Shutting down
+2021-12-02 10:11:08.921 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 10:11:08.921 uvicorn.error INFO Application shutdown complete.
+2021-12-02 10:11:08.921 uvicorn.error INFO Finished server process [87050]
+2021-12-02 10:11:10.073 uvicorn.error INFO Started server process [87256]
+2021-12-02 10:11:10.074 uvicorn.error INFO Waiting for application startup.
+2021-12-02 10:11:10.075 uvicorn.error INFO Application startup complete.
+2021-12-02 10:20:10.116 uvicorn.error INFO Shutting down
+2021-12-02 10:20:10.223 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 10:20:10.225 uvicorn.error INFO Application shutdown complete.
+2021-12-02 10:20:10.226 uvicorn.error INFO Finished server process [87256]
+2021-12-02 10:20:11.471 uvicorn.error INFO Started server process [87649]
+2021-12-02 10:20:11.472 uvicorn.error INFO Waiting for application startup.
+2021-12-02 10:20:11.472 uvicorn.error INFO Application startup complete.
+2021-12-02 11:34:18.529 uvicorn.error INFO Shutting down
+2021-12-02 11:34:18.645 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 11:34:18.652 uvicorn.error INFO Application shutdown complete.
+2021-12-02 11:34:18.652 uvicorn.error INFO Finished server process [87649]
+2021-12-02 11:34:43.344 uvicorn.error INFO Started server process [90605]
+2021-12-02 11:34:43.345 uvicorn.error INFO Waiting for application startup.
+2021-12-02 11:34:43.346 uvicorn.error INFO Application startup complete.
+2021-12-02 11:35:07.400 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'shutil' is not defined
+
+2021-12-02 11:35:21.055 uvicorn.error INFO Shutting down
+2021-12-02 11:35:21.157 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 11:35:21.158 uvicorn.error INFO Application shutdown complete.
+2021-12-02 11:35:21.159 uvicorn.error INFO Finished server process [90605]
+2021-12-02 11:35:22.220 uvicorn.error INFO Started server process [90615]
+2021-12-02 11:35:22.221 uvicorn.error INFO Waiting for application startup.
+2021-12-02 11:35:22.222 uvicorn.error INFO Application startup complete.
+2021-12-02 11:35:23.542 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 77: invalid start byte
+
+2021-12-02 11:36:17.719 uvicorn.error INFO Shutting down
+2021-12-02 11:36:17.823 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 11:36:17.823 uvicorn.error INFO Application shutdown complete.
+2021-12-02 11:36:17.823 uvicorn.error INFO Finished server process [90615]
+2021-12-02 11:36:18.781 uvicorn.error INFO Started server process [90634]
+2021-12-02 11:36:18.782 uvicorn.error INFO Waiting for application startup.
+2021-12-02 11:36:18.782 uvicorn.error INFO Application startup complete.
+2021-12-02 11:36:22.754 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+TypeError: 'encoding' is an invalid keyword argument for this function
+
+2021-12-02 11:36:44.957 uvicorn.error INFO Shutting down
+2021-12-02 11:36:45.062 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 11:36:45.063 uvicorn.error INFO Application shutdown complete.
+2021-12-02 11:36:45.063 uvicorn.error INFO Finished server process [90634]
+2021-12-02 11:36:45.832 uvicorn.error INFO Started server process [90639]
+2021-12-02 11:36:45.833 uvicorn.error INFO Waiting for application startup.
+2021-12-02 11:36:45.834 uvicorn.error INFO Application startup complete.
+2021-12-02 11:36:47.797 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 77: invalid start byte
+
+2021-12-02 13:14:31.369 uvicorn.error INFO Shutting down
+2021-12-02 13:14:31.478 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:14:31.479 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:14:31.480 uvicorn.error INFO Finished server process [90639]
+2021-12-02 13:14:33.246 uvicorn.error INFO Started server process [91704]
+2021-12-02 13:14:33.248 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:14:33.249 uvicorn.error INFO Application startup complete.
+2021-12-02 13:21:17.756 uvicorn.error INFO Shutting down
+2021-12-02 13:21:17.863 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:21:17.863 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:21:17.864 uvicorn.error INFO Finished server process [91704]
+2021-12-02 13:21:19.079 uvicorn.error INFO Started server process [91770]
+2021-12-02 13:21:19.080 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:21:19.081 uvicorn.error INFO Application startup complete.
+2021-12-02 13:23:08.164 uvicorn.error INFO Shutting down
+2021-12-02 13:23:08.270 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:23:08.270 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:23:08.270 uvicorn.error INFO Finished server process [91770]
+2021-12-02 13:23:09.375 uvicorn.error INFO Started server process [91783]
+2021-12-02 13:23:09.376 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:23:09.377 uvicorn.error INFO Application startup complete.
+2021-12-02 13:23:24.829 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+TypeError
+
+2021-12-02 13:37:38.183 uvicorn.error INFO Shutting down
+2021-12-02 13:37:38.292 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:37:38.295 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:37:38.296 uvicorn.error INFO Finished server process [91783]
+2021-12-02 13:37:39.639 uvicorn.error INFO Started server process [91928]
+2021-12-02 13:37:39.640 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:37:39.641 uvicorn.error INFO Application startup complete.
+2021-12-02 13:37:53.560 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NotADirectoryError: [Errno 20] Not a directory: '門店營業時間.csv'
+
+2021-12-02 13:38:18.019 uvicorn.error INFO Shutting down
+2021-12-02 13:38:18.121 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:38:18.122 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:38:18.122 uvicorn.error INFO Finished server process [91928]
+2021-12-02 13:38:19.685 uvicorn.error INFO Started server process [91938]
+2021-12-02 13:38:19.689 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:38:19.689 uvicorn.error INFO Application startup complete.
+2021-12-02 13:38:21.283 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+AttributeError: module 'shutil' has no attribute 'rm'
+
+2021-12-02 13:40:48.413 uvicorn.error INFO Shutting down
+2021-12-02 13:40:48.518 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:40:48.518 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:40:48.518 uvicorn.error INFO Finished server process [91938]
+2021-12-02 13:40:49.954 uvicorn.error INFO Started server process [91970]
+2021-12-02 13:40:49.955 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:40:49.956 uvicorn.error INFO Application startup complete.
+2021-12-02 13:47:38.312 uvicorn.error INFO Shutting down
+2021-12-02 13:47:38.418 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:47:38.418 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:47:38.418 uvicorn.error INFO Finished server process [91970]
+2021-12-02 13:47:39.597 uvicorn.error INFO Started server process [92178]
+2021-12-02 13:47:39.597 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:47:39.598 uvicorn.error INFO Application startup complete.
+2021-12-02 13:47:41.661 uvicorn.error INFO Shutting down
+2021-12-02 13:47:41.763 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:47:41.764 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:47:41.764 uvicorn.error INFO Finished server process [92178]
+2021-12-02 13:47:42.674 uvicorn.error INFO Started server process [92179]
+2021-12-02 13:47:42.676 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:47:42.678 uvicorn.error INFO Application startup complete.
+2021-12-02 13:48:13.792 uvicorn.error INFO Shutting down
+2021-12-02 13:48:13.900 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:48:13.902 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:48:13.902 uvicorn.error INFO Finished server process [92179]
+2021-12-02 13:48:15.116 uvicorn.error INFO Started server process [92183]
+2021-12-02 13:48:15.117 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:48:15.118 uvicorn.error INFO Application startup complete.
+2021-12-02 13:48:18.979 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'buffer' is not defined
+
+2021-12-02 13:48:25.819 uvicorn.error INFO Shutting down
+2021-12-02 13:48:25.925 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:48:25.926 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:48:25.926 uvicorn.error INFO Finished server process [92183]
+2021-12-02 13:48:27.626 uvicorn.error INFO Started server process [92185]
+2021-12-02 13:48:27.627 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:48:27.628 uvicorn.error INFO Application startup complete.
+2021-12-02 13:48:28.129 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 13:48:28.132 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'csv' is not defined
+
+2021-12-02 13:48:52.162 uvicorn.error INFO Shutting down
+2021-12-02 13:48:52.264 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:48:52.264 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:48:52.265 uvicorn.error INFO Finished server process [92185]
+2021-12-02 13:48:54.302 uvicorn.error INFO Started server process [92191]
+2021-12-02 13:48:54.306 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:48:54.307 uvicorn.error INFO Application startup complete.
+2021-12-02 13:48:55.672 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 13:48:55.674 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'buffer' is not defined
+
+2021-12-02 13:49:09.267 uvicorn.error INFO Shutting down
+2021-12-02 13:49:09.369 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:49:09.369 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:49:09.369 uvicorn.error INFO Finished server process [92191]
+2021-12-02 13:49:10.599 uvicorn.error INFO Started server process [92194]
+2021-12-02 13:49:10.601 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:49:10.602 uvicorn.error INFO Application startup complete.
+2021-12-02 13:49:11.618 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 13:49:11.621 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'os' is not defined
+
+2021-12-02 13:49:31.783 uvicorn.error INFO Shutting down
+2021-12-02 13:49:31.884 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:49:31.884 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:49:31.884 uvicorn.error INFO Finished server process [92194]
+2021-12-02 13:49:33.592 uvicorn.error INFO Started server process [92197]
+2021-12-02 13:49:33.598 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:49:33.599 uvicorn.error INFO Application startup complete.
+2021-12-02 13:49:33.995 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 13:51:34.875 uvicorn.error INFO Shutting down
+2021-12-02 13:51:34.984 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:51:34.985 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:51:34.985 uvicorn.error INFO Finished server process [92197]
+2021-12-02 13:51:37.058 uvicorn.error INFO Started server process [92220]
+2021-12-02 13:51:37.080 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:51:37.083 uvicorn.error INFO Application startup complete.
+2021-12-02 13:51:37.124 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 13:52:06.758 uvicorn.error INFO Shutting down
+2021-12-02 13:52:06.859 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:52:06.860 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:52:06.860 uvicorn.error INFO Finished server process [92220]
+2021-12-02 13:52:08.144 uvicorn.error INFO Started server process [92224]
+2021-12-02 13:52:08.145 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:52:08.146 uvicorn.error INFO Application startup complete.
+2021-12-02 13:52:09.258 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 13:52:33.122 uvicorn.error INFO Shutting down
+2021-12-02 13:52:33.225 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:52:33.225 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:52:33.226 uvicorn.error INFO Finished server process [92224]
+2021-12-02 13:52:34.551 uvicorn.error INFO Started server process [92228]
+2021-12-02 13:52:34.553 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:52:34.553 uvicorn.error INFO Application startup complete.
+2021-12-02 13:52:36.336 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 13:56:14.391 uvicorn.error INFO Shutting down
+2021-12-02 13:56:14.499 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 13:56:14.500 uvicorn.error INFO Application shutdown complete.
+2021-12-02 13:56:14.500 uvicorn.error INFO Finished server process [92228]
+2021-12-02 13:56:15.928 uvicorn.error INFO Started server process [92264]
+2021-12-02 13:56:15.933 uvicorn.error INFO Waiting for application startup.
+2021-12-02 13:56:15.934 uvicorn.error INFO Application startup complete.
+2021-12-02 13:56:21.953 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:06:04.231 uvicorn.error INFO Shutting down
+2021-12-02 14:06:04.340 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 14:06:04.342 uvicorn.error INFO Application shutdown complete.
+2021-12-02 14:06:04.342 uvicorn.error INFO Finished server process [92264]
+2021-12-02 14:06:07.061 uvicorn.error INFO Started server process [92488]
+2021-12-02 14:06:07.066 uvicorn.error INFO Waiting for application startup.
+2021-12-02 14:06:07.068 uvicorn.error INFO Application startup complete.
+2021-12-02 14:06:50.971 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:06:50.973 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'shutil' is not defined
+
+2021-12-02 14:07:03.534 uvicorn.error INFO Shutting down
+2021-12-02 14:07:03.641 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 14:07:03.642 uvicorn.error INFO Application shutdown complete.
+2021-12-02 14:07:03.642 uvicorn.error INFO Finished server process [92488]
+2021-12-02 14:07:04.773 uvicorn.error INFO Started server process [92504]
+2021-12-02 14:07:04.775 uvicorn.error INFO Waiting for application startup.
+2021-12-02 14:07:04.775 uvicorn.error INFO Application startup complete.
+2021-12-02 14:07:05.086 uvicorn.error INFO Shutting down
+2021-12-02 14:07:05.191 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 14:07:05.192 uvicorn.error INFO Application shutdown complete.
+2021-12-02 14:07:05.192 uvicorn.error INFO Finished server process [92504]
+2021-12-02 14:07:06.850 uvicorn.error INFO Started server process [92505]
+2021-12-02 14:07:06.852 uvicorn.error INFO Waiting for application startup.
+2021-12-02 14:07:06.852 uvicorn.error INFO Application startup complete.
+2021-12-02 14:07:11.220 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:07:11.229 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+NameError: name 'shutil' is not defined
+
+2021-12-02 14:07:28.435 uvicorn.error INFO Shutting down
+2021-12-02 14:07:28.537 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 14:07:28.538 uvicorn.error INFO Application shutdown complete.
+2021-12-02 14:07:28.538 uvicorn.error INFO Finished server process [92505]
+2021-12-02 14:07:29.545 uvicorn.error INFO Started server process [92509]
+2021-12-02 14:07:29.546 uvicorn.error INFO Waiting for application startup.
+2021-12-02 14:07:29.548 uvicorn.error INFO Application startup complete.
+2021-12-02 14:07:30.270 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:07:30.277 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+AttributeError: 'str' object has no attribute 'read'
+
+2021-12-02 14:07:58.415 uvicorn.error INFO Shutting down
+2021-12-02 14:07:58.521 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 14:07:58.521 uvicorn.error INFO Application shutdown complete.
+2021-12-02 14:07:58.522 uvicorn.error INFO Finished server process [92509]
+2021-12-02 14:07:59.249 uvicorn.error INFO Started server process [92513]
+2021-12-02 14:07:59.250 uvicorn.error INFO Waiting for application startup.
+2021-12-02 14:07:59.250 uvicorn.error INFO Application startup complete.
+2021-12-02 14:08:00.698 uvicorn.error INFO Shutting down
+2021-12-02 14:08:00.801 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 14:08:00.801 uvicorn.error INFO Application shutdown complete.
+2021-12-02 14:08:00.801 uvicorn.error INFO Finished server process [92513]
+2021-12-02 14:08:01.655 uvicorn.error INFO Started server process [92515]
+2021-12-02 14:08:01.656 uvicorn.error INFO Waiting for application startup.
+2021-12-02 14:08:01.656 uvicorn.error INFO Application startup complete.
+2021-12-02 14:08:02.809 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:08:02.813 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 77-78: invalid continuation byte
+
+2021-12-02 14:08:28.021 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:08:28.022 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 77-78: invalid continuation byte
+
+2021-12-02 14:08:39.535 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:08:39.537 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 77: invalid start byte
+
+2021-12-02 14:09:18.343 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:09:18.345 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 77: invalid start byte
+
+2021-12-02 14:09:26.257 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:09:26.259 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 77-78: invalid continuation byte
+
+2021-12-02 14:10:44.054 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:11:24.602 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:11:28.732 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:11:46.160 app.crud.crud_site INFO Start get one site info
+2021-12-02 14:11:46.195 app.crud.crud_site INFO Get one site info success
+2021-12-02 14:12:12.115 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:12:18.741 app.crud.crud_site INFO Start get one site info
+2021-12-02 14:12:18.756 app.crud.crud_site INFO Get one site info success
+2021-12-02 14:20:34.763 uvicorn.error INFO Shutting down
+2021-12-02 14:20:34.875 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 14:20:34.877 uvicorn.error INFO Application shutdown complete.
+2021-12-02 14:20:34.877 uvicorn.error INFO Finished server process [92515]
+2021-12-02 14:20:36.407 uvicorn.error INFO Started server process [92876]
+2021-12-02 14:20:36.408 uvicorn.error INFO Waiting for application startup.
+2021-12-02 14:20:36.409 uvicorn.error INFO Application startup complete.
+2021-12-02 14:46:36.664 uvicorn.error INFO Shutting down
+2021-12-02 14:46:36.771 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 14:46:36.773 uvicorn.error INFO Application shutdown complete.
+2021-12-02 14:46:36.773 uvicorn.error INFO Finished server process [92876]
+2021-12-02 14:46:38.082 uvicorn.error INFO Started server process [93764]
+2021-12-02 14:46:38.083 uvicorn.error INFO Waiting for application startup.
+2021-12-02 14:46:38.083 uvicorn.error INFO Application startup complete.
+2021-12-02 14:46:55.772 uvicorn.error INFO Shutting down
+2021-12-02 14:46:55.877 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 14:46:55.877 uvicorn.error INFO Application shutdown complete.
+2021-12-02 14:46:55.877 uvicorn.error INFO Finished server process [93764]
+2021-12-02 14:46:56.685 uvicorn.error INFO Started server process [93768]
+2021-12-02 14:46:56.686 uvicorn.error INFO Waiting for application startup.
+2021-12-02 14:46:56.687 uvicorn.error INFO Application startup complete.
+2021-12-02 14:52:12.181 app.crud.crud_site INFO Start update office hour by csv.
+2021-12-02 14:52:15.021 app.crud.crud_site INFO Update office hour by csv success.
+2021-12-02 15:08:25.693 uvicorn.error INFO Shutting down
+2021-12-02 15:08:25.803 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 15:08:25.804 uvicorn.error INFO Application shutdown complete.
+2021-12-02 15:08:25.805 uvicorn.error INFO Finished server process [93768]
+2021-12-02 15:08:26.878 uvicorn.error INFO Started server process [95013]
+2021-12-02 15:08:26.878 uvicorn.error INFO Waiting for application startup.
+2021-12-02 15:08:26.879 uvicorn.error INFO Application startup complete.
+2021-12-02 15:08:58.626 uvicorn.error INFO Shutting down
+2021-12-02 15:08:58.728 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 15:08:58.729 uvicorn.error INFO Application shutdown complete.
+2021-12-02 15:08:58.729 uvicorn.error INFO Finished server process [95013]
+2021-12-02 16:02:09.332 uvicorn.error INFO Started server process [96067]
+2021-12-02 16:02:09.333 uvicorn.error INFO Waiting for application startup.
+2021-12-02 16:02:09.336 uvicorn.error INFO Application startup complete.
+2021-12-02 16:02:40.276 uvicorn.error INFO Shutting down
+2021-12-02 16:02:40.380 uvicorn.error INFO Waiting for application shutdown.
+2021-12-02 16:02:40.381 uvicorn.error INFO Application shutdown complete.
+2021-12-02 16:02:40.381 uvicorn.error INFO Finished server process [96067]
+2022-02-09 09:42:54.097 uvicorn.error INFO Started server process [3467]
+2022-02-09 09:42:54.098 uvicorn.error INFO Waiting for application startup.
+2022-02-09 09:42:54.099 uvicorn.error INFO Application startup complete.
+2022-02-09 09:43:53.907 uvicorn.error INFO Shutting down
+2022-02-09 09:43:54.013 uvicorn.error INFO Waiting for application shutdown.
+2022-02-09 09:43:54.014 uvicorn.error INFO Application shutdown complete.
+2022-02-09 09:43:54.015 uvicorn.error INFO Finished server process [3467]
+2022-02-09 09:43:55.287 uvicorn.error INFO Started server process [3684]
+2022-02-09 09:43:55.288 uvicorn.error INFO Waiting for application startup.
+2022-02-09 09:43:55.289 uvicorn.error INFO Application startup complete.
+2022-02-09 09:44:12.250 uvicorn.error INFO Shutting down
+2022-02-09 09:44:12.358 uvicorn.error INFO Waiting for application shutdown.
+2022-02-09 09:44:12.359 uvicorn.error INFO Application shutdown complete.
+2022-02-09 09:44:12.359 uvicorn.error INFO Finished server process [3684]
+2022-02-09 09:44:13.690 uvicorn.error INFO Started server process [3704]
+2022-02-09 09:44:13.691 uvicorn.error INFO Waiting for application startup.
+2022-02-09 09:44:13.692 uvicorn.error INFO Application startup complete.
+2022-02-09 09:44:31.155 uvicorn.error INFO Shutting down
+2022-02-09 09:44:31.258 uvicorn.error INFO Waiting for application shutdown.
+2022-02-09 09:44:31.258 uvicorn.error INFO Application shutdown complete.
+2022-02-09 09:44:31.259 uvicorn.error INFO Finished server process [3704]
+2022-02-09 09:44:32.619 uvicorn.error INFO Started server process [3727]
+2022-02-09 09:44:32.620 uvicorn.error INFO Waiting for application startup.
+2022-02-09 09:44:32.621 uvicorn.error INFO Application startup complete.
+2022-02-09 09:44:41.996 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+AttributeError: 'DbRoutineInput' object has no attribute 'site_id'
+
+2022-02-09 09:45:00.785 uvicorn.error INFO Shutting down
+2022-02-09 09:45:00.887 uvicorn.error INFO Waiting for application shutdown.
+2022-02-09 09:45:00.888 uvicorn.error INFO Application shutdown complete.
+2022-02-09 09:45:00.889 uvicorn.error INFO Finished server process [3727]
+2022-02-09 09:45:02.312 uvicorn.error INFO Started server process [3760]
+2022-02-09 09:45:02.313 uvicorn.error INFO Waiting for application startup.
+2022-02-09 09:45:02.314 uvicorn.error INFO Application startup complete.
+2022-02-09 09:45:11.102 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+redis.exceptions.ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+
+2022-02-09 09:45:28.371 uvicorn.error INFO Shutting down
+2022-02-09 09:45:28.474 uvicorn.error INFO Waiting for application shutdown.
+2022-02-09 09:45:28.475 uvicorn.error INFO Application shutdown complete.
+2022-02-09 09:45:28.476 uvicorn.error INFO Finished server process [3760]
+2022-02-09 09:45:29.367 uvicorn.error INFO Started server process [3791]
+2022-02-09 09:45:29.368 uvicorn.error INFO Waiting for application startup.
+2022-02-09 09:45:29.369 uvicorn.error INFO Application startup complete.
+2022-02-09 09:45:32.071 app.core.db_session ERROR Traceback (most recent call last):
+  File "./app/core/db_session.py", line 41, in get_db_session
+    yield db
+redis.exceptions.ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+
+2022-02-09 09:48:41.764 uvicorn.error INFO Shutting down
+2022-02-09 09:48:41.867 uvicorn.error INFO Waiting for application shutdown.
+2022-02-09 09:48:41.868 uvicorn.error INFO Application shutdown complete.
+2022-02-09 09:48:41.869 uvicorn.error INFO Finished server process [3791]
+2022-02-09 09:48:42.861 uvicorn.error INFO Started server process [3987]
+2022-02-09 09:48:42.862 uvicorn.error INFO Waiting for application startup.
+2022-02-09 09:48:42.863 uvicorn.error INFO Application startup complete.
+2022-02-09 09:48:46.361 uvicorn.error INFO Shutting down
+2022-02-09 09:48:46.466 uvicorn.error INFO Waiting for application shutdown.
+2022-02-09 09:48:46.467 uvicorn.error INFO Application shutdown complete.
+2022-02-09 09:48:46.467 uvicorn.error INFO Finished server process [3987]
